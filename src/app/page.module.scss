@@ -1,8 +1,23 @@
-@use '/src/styles/variables.module' as *;
+@use "/src/styles/variables.module" as *;
 
 .main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $white;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $black, $dark-coffee-brown);
+}
+
+.mainWrapper {
+  max-width: 1322px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black;
+  border-radius: $big;
+  border: 1px solid $gray-blur;
+  min-height: 100vh;
+  padding: $xxs;
 }

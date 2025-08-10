@@ -10,9 +10,15 @@ $gold-lite: #AF8D6C;
 $sandy-baige: rgba(213, 186, 148, 1);
 $caramel: rgba(185, 135, 86, 1);
 $espresso: rgba(83, 68, 52, 1);
+$dark-coffee-brown: rgba(66, 43, 11, 1);
 
 // sizes
-$small-gap: 8px;
-$medium-gap: 16px;
-$big-gap: 24px;
-$xl-gap: 32px;
+$xxs: 0.5rem; // 8px
+$xs: 0.75rem; // 12px
+$small: 0.875rem; // 14px
+$standard: 1rem; // 16px
+$medium: 1.25rem; // 20px
+$big: 1.5rem; // 24px
+$l: 2rem; // 32px
+$xl: 2.25rem; // 36px
+$xxl: 2.375rem; // 38px
