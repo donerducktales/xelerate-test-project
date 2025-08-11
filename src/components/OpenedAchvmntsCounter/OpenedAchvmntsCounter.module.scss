@@ -1,0 +1,40 @@
+@use '/src/styles/variables.module' as *;
+
+.openedAchvmntsCounter {
+  max-width: 116.5px;
+  width: 100%;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $gray-blur;
+  border-radius: $xxs;
+  border: 1px solid $gray-50;
+  padding: $standard;
+
+  h1 {
+    font-size: $big;
+    color: $white;
+    margin-bottom: $standard;
+  }
+
+  p {
+    font-size: $small;
+    color: $gray-lite;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .openedAchvmntsCounter {
+    max-width: 240px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .openedAchvmntsCounter {
+    width: 100%;
+    max-width: none;
+  }
+}

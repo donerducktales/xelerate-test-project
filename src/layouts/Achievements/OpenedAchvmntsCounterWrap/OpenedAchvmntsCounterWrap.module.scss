@@ -1,0 +1,17 @@
+@use '/src/styles/variables.module' as *;
+
+.openedAchievementsCounterWrap {
+  display: flex;
+  flex-direction: row;
+  gap: $xxs;
+  column-gap: $xxs;
+  // flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .openedAchievementsCounterWrap {
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+}

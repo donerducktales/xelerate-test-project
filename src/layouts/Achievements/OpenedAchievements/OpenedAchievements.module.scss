@@ -12,6 +12,11 @@
   column-gap: $xxs;
 }
 
+@media (max-width: 1200px) {
+  .openedAchievements {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 768px) {
   .openedAchievements {

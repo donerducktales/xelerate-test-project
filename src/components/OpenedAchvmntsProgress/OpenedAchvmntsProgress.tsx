@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./OpenedAchvmntsProgress.module.scss";
-import scssvariables from "@/styles/_variables.module.scss";
 
 export default function OpenedAchvmntsProgress() {
   return (
