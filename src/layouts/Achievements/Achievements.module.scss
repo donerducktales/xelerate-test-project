@@ -1,20 +1,23 @@
 @use '/src/styles/variables.module' as *;
 
 .achievements {
-  min-height: 395px;
-  width: calc(100% - $standard);  
+  min-height: 353px;
+  width: calc(100% - 48px);  
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: $big;
   border-radius: $big;
   border: 1px solid $gray-50;
   background-color: $gray-blur;
+  padding: $big;
 }
 
 .achievementsHeaderWrapper {
   display: flex;
   flex-direction: column;
   gap: $standard;
-  margin: $big;
+  width: 100%;
   
   h1 {
     color: $white;
@@ -28,9 +31,13 @@
 }
 
 @media (max-width: 768px) {
+  .achievements {
+    gap: $standard;
+    padding: $standard;
+  }
+  
   .achievementsHeaderWrapper {
     gap: $xxs;
-    margin: $standard;
 
     h1 {
       font-size: $l;

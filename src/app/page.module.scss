@@ -11,7 +11,7 @@
 
 .mainWrapper {
   max-width: 1322px;
-  width: 100%;
+  width: calc(100% - $standard);
   display: flex;
   flex-direction: column;
   align-items: center;

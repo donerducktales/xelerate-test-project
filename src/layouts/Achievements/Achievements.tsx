@@ -1,4 +1,5 @@
 import styles from './Achievements.module.scss'
+import OpenedAchievements from './OpenedAchievements/OpenedAchievements'
 
 export default function Achievements() {
   return (
@@ -7,6 +8,7 @@ export default function Achievements() {
         <h1>Досягнення</h1>
         <h2>Ви крутіші, ніж 87% спеціалістів!</h2>
       </div>
+      <OpenedAchievements />
     </section>
   )
 }

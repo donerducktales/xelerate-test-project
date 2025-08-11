@@ -1,0 +1,21 @@
+@use '/src/styles/variables.module' as *;
+
+.openedAchievements {
+  width: calc(100% - $l);
+  display: flex;
+  flex-direction: row;
+  background-color: $gray-blur;
+  border-radius: $standard;
+  border: 1px solid $dark-gray-15;
+  padding: $standard;
+  gap: $xxs;
+  column-gap: $xxs;
+}
+
+
+@media (max-width: 768px) {
+  .openedAchievements {
+    width: calc(100% - $standard);
+    padding: $xxs;
+  }
+}
