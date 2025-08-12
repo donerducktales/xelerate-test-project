@@ -12,6 +12,10 @@
 
   &.active {
     border: 1px solid $gold-lite;
+
+    h2 {
+      color: $white;
+    }
   }
 
   h1 {

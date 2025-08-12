@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "./OpenedAchvmntsProgress.module.scss";
+import { achievementsList } from "@/assets/achievementsList";
 
 export default function OpenedAchvmntsProgress() {
+  const openedAchievementsQuantity = achievementsList.length;
+  
   return (
     <div className={styles.openedAchievementsProgress}>
       <div className={styles.achievementsProgressTextWrapper}>
@@ -14,12 +17,12 @@ export default function OpenedAchvmntsProgress() {
           />
           <h1>Відкрито досягнень</h1>
         </div>
-        <p>18 / 143</p>
+        <p>{openedAchievementsQuantity} / 143</p>
       </div>
       <div className={styles.achievementsProgressBar}>
         <div
           style={{
-            width: "150px",
+            width: `${(openedAchievementsQuantity / 143) * 100}%`,
             background:
               "linear-gradient(to left, rgba(213, 186, 148, 1), rgba(185, 135, 86, 1), rgba(83, 68, 52, 1))",
             borderRadius: "8px",
@@ -27,7 +30,7 @@ export default function OpenedAchvmntsProgress() {
         />
         <div
           style={{
-            width: "100%",
+            width: `${100 - ((openedAchievementsQuantity / 143) * 100)}%`,
             background: `rgba(83, 83, 83, 1)`,
             borderRadius: "8px",
           }}
