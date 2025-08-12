@@ -8,6 +8,11 @@
   flex-direction: column;
   gap: $standard;
   padding: $standard;
+  border-radius: $xs;
+
+  &.active {
+    border: 1px solid $gold-lite;
+  }
 
   h1 {
     color: $gold-lite;

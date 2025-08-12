@@ -1,7 +1,8 @@
 @use '/src/styles/variables.module' as *;
 
 .selectRanks {
-  max-width: 157px;
+  max-width: 167px;
+  width: 100%;
   height: 87px;
   background-color: $gray-blur;
   border-radius: $standard;
