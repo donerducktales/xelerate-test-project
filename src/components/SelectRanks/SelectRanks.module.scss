@@ -1,0 +1,25 @@
+@use '/src/styles/variables.module' as *;
+
+.selectRanks {
+  max-width: 157px;
+  height: 87px;
+  background-color: $gray-blur;
+  border-radius: $standard;
+  border: 1px solid $gray-blur;
+  text-transform: uppercase;
+  color: $gray-lite;
+  padding: $big;
+
+  option {
+    background-color: $gray-blur;
+    outline: none;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .selectRanks {
+    max-width: none;
+    width: 100%;
+  }
+}
