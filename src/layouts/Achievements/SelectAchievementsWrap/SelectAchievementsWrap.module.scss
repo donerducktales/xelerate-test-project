@@ -1,0 +1,19 @@
+@use '/src/styles/variables.module' as *;
+
+.selectAchievementsWrap {
+  min-height: 87px;
+  max-width: 1079px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $gray-blur;
+  border-radius: $standard;
+  border: 1px solid $gray-blur;
+}
+
+@media (max-width: 768px) {
+  .selectAchievementsWrap {
+    flex-direction: column;
+  }
+}

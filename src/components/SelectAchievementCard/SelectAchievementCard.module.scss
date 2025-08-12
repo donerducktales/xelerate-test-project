@@ -1,0 +1,41 @@
+@use '/src/styles/variables.module' as *;
+
+.selectAchievementCard {
+  max-width: 349px;
+  width: 100%;
+  height: 47px;
+  display: flex;
+  flex-direction: column;
+  gap: $standard;
+  padding: $standard;
+
+  h1 {
+    color: $gold-lite;
+    font-size: $xs;
+  }
+}
+
+.achivementsQuantityRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  h2 {
+    font-size: $small;
+    color: $gray-lite;
+  }
+
+  p {
+    color: $gray;
+    font-size: small;
+  }
+}
+
+@media (max-width: 768px) {
+  .selectAchievementCard {
+    max-width: none;
+    width: calc(100% - $l);
+  }
+}

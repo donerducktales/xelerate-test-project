@@ -1,0 +1,8 @@
+@use '/src/styles/variables.module' as *;
+
+.selectAchievements {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
