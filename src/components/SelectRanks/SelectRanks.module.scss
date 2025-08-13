@@ -1,5 +1,11 @@
 @use '/src/styles/variables.module' as *;
 
+.selectRanksWrapper {
+  position: relative;
+  max-width: 167px;
+  width: 100%;
+}
+
 .selectRanks {
   max-width: 167px;
   width: 100%;
@@ -9,7 +15,8 @@
   border: 1px solid $gray-blur;
   text-transform: uppercase;
   color: $gray-lite;
-  padding: $big;
+  padding: $big $l;
+  appearance: none;
 
   option {
     background-color: $gray-blur;
@@ -18,9 +25,24 @@
   }
 }
 
+.selectRanksArrow {
+  position: absolute;
+  top: 35%;
+  right: 16%;
+}
+
 @media (max-width: 768px) {
+  .selectRanksWrapper {
+    max-width: none;
+  }
+  
   .selectRanks {
     max-width: none;
     width: 100%;
+    padding: $standard;
+  }
+
+  .selectRanksArrow {
+    right: 1.5%;
   }
 }
