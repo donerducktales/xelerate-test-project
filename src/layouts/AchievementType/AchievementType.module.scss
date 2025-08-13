@@ -1,0 +1,10 @@
+@use "/src/styles/variables.module" as *;
+
+.achievementType {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $xxs;
+  align-items: center;
+  color: aqua;
+}

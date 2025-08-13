@@ -1,5 +1,6 @@
 import SelectAchievementCard from "@/components/SelectAchievementCard/SelectAchievementCard";
 import styles from "./SelectAchievementsWrap.module.scss";
+import { achievementsList } from "@/assets/achievementsList";
 
 interface AchievementVariant {
   id: number;
@@ -15,21 +16,21 @@ const achievementVariant: AchievementVariant[] = [
     orderNumber: "01",
     name: "Всі досягнення",
     clickName: "all",
-    achievementsQuantity: 134,
+    achievementsQuantity: achievementsList.length,
   },
   {
     id: 1,
     orderNumber: "02",
     name: "Досягнення на платформі",
     clickName: "platform",
-    achievementsQuantity: 33,
+    achievementsQuantity: achievementsList.filter(el => el.achievementType === 'platform').length,
   },
   {
     id: 2,
     orderNumber: "03",
     name: "Досягнення спеціаліста",
     clickName: "specialist",
-    achievementsQuantity: 22,
+    achievementsQuantity: achievementsList.filter(el => el.achievementType === 'specialist').length,
   },
 ];
 
