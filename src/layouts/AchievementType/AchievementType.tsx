@@ -2,6 +2,15 @@
 
 import useSelectAchievementsStore from "@/lib/SelectAchievementState";
 import styles from "./AchievementType.module.scss";
+import AchievementTypeWrapper from "@/components/AchievementTypeWrapper/AchievementTypeWrapper";
+import { AchievementsList, achievementsList } from "@/assets/achievementsList";
+
+const platformAchievements: AchievementsList[] = achievementsList.filter(
+  (el) => el.achievementType === "platform"
+);
+const specialistAchievements: AchievementsList[] = achievementsList.filter(
+  (el) => el.achievementType === "specialist"
+);
 
 export default function AchievementType() {
   const { value } = useSelectAchievementsStore();
@@ -9,11 +18,30 @@ export default function AchievementType() {
   return (
     <section className={styles.achievementType}>
       {value === "all" ? (
-        <p>All</p>
+        <>
+          <AchievementTypeWrapper
+            achievementName="Досягнення на платформі"
+            achievementQuantity={platformAchievements.length}
+            achievementCard={platformAchievements}
+          />
+          <AchievementTypeWrapper
+            achievementName="Досягнення спеціаліста"
+            achievementQuantity={specialistAchievements.length}
+            achievementCard={specialistAchievements}
+          />
+        </>
       ) : value === "platform" ? (
-        <p>Platform</p>
+        <AchievementTypeWrapper
+          achievementName="Досягнення на платформі"
+          achievementQuantity={platformAchievements.length}
+          achievementCard={platformAchievements}
+        />
       ) : value === "specialist" ? (
-        <p>Specialist</p>
+        <AchievementTypeWrapper
+          achievementName="Досягнення спеціаліста"
+          achievementQuantity={specialistAchievements.length}
+          achievementCard={specialistAchievements}
+        />
       ) : (
         ""
       )}

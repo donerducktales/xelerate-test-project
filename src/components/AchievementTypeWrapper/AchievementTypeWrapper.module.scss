@@ -1,0 +1,52 @@
+@use '/src/styles/variables.module' as *;
+
+.achievementTypeWrapper {
+  width: calc(100% - 48px);  
+  background-color: $gray-blur;
+  padding: $big;
+  border-radius: $big;
+  border: 1px solid $gray-50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievementTypeWrapText {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: $standard;
+  align-items: flex-start;
+  margin-bottom: $l;
+
+  h1 {
+    color: $white;
+    font-size: $xl;
+  } 
+
+  p {
+    font-size: $medium;
+    color: $gray-lite;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievementTypeWrapper {
+    padding: $standard;
+  }
+  
+  .achievementTypeWrapText {
+    align-items: center;
+    justify-content: space-between;
+    gap: none;
+
+    h1 {
+      font-size: $big;
+    } 
+
+    p {
+      font-size: $standard;
+    }
+  }
+}
