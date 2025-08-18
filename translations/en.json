@@ -6,7 +6,10 @@
   "homePage": {
     "achievements": {
       "h1": "Achievement",
-      "h2": "You're cooler than 87% of specialists!"
+      "h2": "You're cooler than 87% of specialists!",
+      "openedAchievementsProgress": {
+        "textWrapperHeader": "Opened achievements"
+      }
     }
   }
 }

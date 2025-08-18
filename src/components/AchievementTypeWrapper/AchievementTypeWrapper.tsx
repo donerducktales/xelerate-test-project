@@ -32,6 +32,7 @@ export default function AchievementTypeWrapper({
             achievementType={el.achievementType}
             progress={el.progress}
             maxProgress={el.maxProgress}
+            rank={el.rank}
           />
         ))}
       </div>

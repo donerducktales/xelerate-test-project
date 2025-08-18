@@ -8,6 +8,7 @@ export interface AchievementsList {
   achievementType: "platform" | "specialist";
   progress: number;
   maxProgress: number;
+  rank: 1 | 2 | 3;
 }
 
 export const achievementsList: AchievementsList[] = [
@@ -22,6 +23,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 7,
     maxProgress: 8,
+    rank: 1,
   },
   {
     id: 1,
@@ -33,6 +35,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 3,
     maxProgress: 10,
+    rank: 2,
   },
   {
     id: 2,
@@ -44,6 +47,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 8,
     maxProgress: 8,
+    rank: 1,
   },
   {
     id: 3,
@@ -55,6 +59,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "specialist",
     progress: 0,
     maxProgress: 8,
+    rank: 1,
   },
   {
     id: 4,
@@ -66,6 +71,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 0,
     maxProgress: 8,
+    rank: 1,
   },
   {
     id: 5,
@@ -77,6 +83,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 5,
     maxProgress: 8,
+    rank: 1,
   },
   {
     id: 6,
@@ -88,6 +95,7 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 0,
     maxProgress: 8,
+    rank: 1,
   },
   {
     id: 7,
@@ -99,5 +107,6 @@ export const achievementsList: AchievementsList[] = [
     achievementType: "platform",
     progress: 0,
     maxProgress: 8,
+    rank: 1,
   },
 ];

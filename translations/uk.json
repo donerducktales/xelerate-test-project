@@ -6,7 +6,10 @@
   "homePage": {
     "achievements": {
       "h1": "Досягнення",
-      "h2": "Ви крутіші, ніж 87% спеціалістів!"
+      "h2": "Ви крутіші, ніж 87% спеціалістів!",
+      "openedAchievementsProgress": {
+        "textWrapperHeader": "Відкрито досягнень"
+      }
     }
   }
 }
