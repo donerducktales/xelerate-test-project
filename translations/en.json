@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "title": "Achievements",
+    "description": "Xelerate test project"
+  },
+  "homePage": {
+    "achievements": {
+      "h1": "Achievement",
+      "h2": "You're cooler than 87% of specialists!"
+    }
+  }
+}
