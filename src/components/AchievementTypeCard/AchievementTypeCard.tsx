@@ -2,6 +2,7 @@ import { AchievementsList } from "@/assets/achievementsList";
 import styles from "./AchievementTypeCard.module.scss";
 import Image from "next/image";
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 const AchievementCardTopPart = ({
   opened,
@@ -59,6 +60,8 @@ const AchievementCardBottomPart = ({
   progress: number;
   maxProgress: number;
 }) => {
+  const t = useTranslations("homePage");
+  
   return (
     <div className={styles.achievementCardBottomPart}>
       <h1>{achievementName}</h1>
@@ -67,7 +70,7 @@ const AchievementCardBottomPart = ({
       ) : (
         <div className={styles.achievementCardBottomPartProgressBar}>
           <div className={styles.bottomPartProgressBarQuantity}>
-            <h2>Досягнення</h2>
+            <h2>{t("achievementType.achievementTypeCardComponent.h2")}</h2>
             <div>
               <p>
                 {progress} / {maxProgress}
@@ -75,10 +78,10 @@ const AchievementCardBottomPart = ({
             </div>
           </div>
           <div className={styles.bottomPartProgressBar}>
-            <div 
-              className={styles.bottomPartProgressBarProgress} 
+            <div
+              className={styles.bottomPartProgressBarProgress}
               style={{
-                width: `${(progress / maxProgress) * 100}%`
+                width: `${(progress / maxProgress) * 100}%`,
               }}
             />
           </div>
@@ -97,13 +100,15 @@ export default function AchievementTypeCard({
   progress,
   maxProgress,
 }: AchievementsList) {
+  const locale = useLocale();
+  
   return (
     <div className={styles.achievementTypeCard}>
-      <AchievementCardTopPart opened={opened} additionalInfo={additionalInfo} />
+      <AchievementCardTopPart opened={opened} additionalInfo={additionalInfo[locale]} />
       <AchievementCardBottomPart
-        achievementName={achievementName}
+        achievementName={achievementName[locale]}
         completed={completed}
-        achievementDescription={achievementDescription}
+        achievementDescription={achievementDescription[locale]}
         progress={progress}
         maxProgress={maxProgress}
       />

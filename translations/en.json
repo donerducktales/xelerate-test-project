@@ -9,6 +9,18 @@
       "h2": "You're cooler than 87% of specialists!",
       "openedAchievementsProgress": {
         "textWrapperHeader": "Opened achievements"
+      },
+      "selectRanks": {
+        "selectOption": "All ranks"
+      }
+    },
+    "achievementType": {
+      "achievementName": {
+        "platform": "Achievements on platform",
+        "specialist": "Specialist's achievements"
+      },
+      "achievementTypeCardComponent": {
+        "h2": "Achievement"
       }
     }
   }

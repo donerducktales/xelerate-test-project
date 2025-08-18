@@ -1,11 +1,7 @@
 import OpenedAchvmntsCounter from "@/components/OpenedAchvmntsCounter/OpenedAchvmntsCounter";
 import styles from "./OpenedAchvmntsCounterWrap.module.scss";
-import { achievementsList } from "@/assets/achievementsList";
-import { Locale, useLocale } from "next-intl";
-
-type Translations = {
-  [key in Locale]: string;
-};
+import { achievementsList, Translations } from "@/assets/achievementsList";
+import { useLocale } from "next-intl";
 
 interface OpenedAchievementsCounter {
   id: number;
