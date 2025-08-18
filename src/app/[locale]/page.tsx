@@ -1,5 +1,5 @@
-import styles from '@/app/page.module.scss'
-import { raleway } from '../assets/fonts/fonts';
+import styles from './page.module.scss'
+import { raleway } from "@/assets/fonts/fonts";
 import Achievements from '@/layouts/Achievements/Achievements';
 import AchievementType from '@/layouts/AchievementType/AchievementType';
 
