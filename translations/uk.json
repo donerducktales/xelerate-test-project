@@ -13,6 +13,15 @@
       "selectRanks": {
         "selectOption": "Всі ранги"
       }
+    },
+    "achievementType": {
+      "achievementName": {
+        "platform": "Досягнення на платформі",
+        "specialist": "Досягнення спеціаліста"
+      },
+      "achievementTypeCardComponent": {
+        "h2": "Досягнення"
+      }
     }
   }
 }

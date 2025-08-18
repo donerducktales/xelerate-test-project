@@ -13,6 +13,15 @@
       "selectRanks": {
         "selectOption": "All ranks"
       }
+    },
+    "achievementType": {
+      "achievementName": {
+        "platform": "Achievements on platform",
+        "specialist": "Specialist's achievements"
+      },
+      "achievementTypeCardComponent": {
+        "h2": "Achievement"
+      }
     }
   }
 }

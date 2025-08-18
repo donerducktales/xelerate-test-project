@@ -1,11 +1,8 @@
 import SelectAchievementCard from "@/components/SelectAchievementCard/SelectAchievementCard";
 import styles from "./SelectAchievementsWrap.module.scss";
-import { achievementsList } from "@/assets/achievementsList";
-import { Locale, useLocale } from "next-intl";
+import { achievementsList, Translations } from "@/assets/achievementsList";
+import { useLocale } from "next-intl";
 
-type Translations = {
-  [key in Locale]: string;
-};
 
 interface AchievementVariant {
   id: number;
