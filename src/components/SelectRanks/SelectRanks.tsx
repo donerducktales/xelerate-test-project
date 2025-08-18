@@ -1,8 +1,11 @@
 import { raleway } from '@/assets/fonts/fonts';
 import styles from './SelectRanks.module.scss'
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function SelectRanks() {
+  const t = useTranslations("homePage");
+  
   return (
     // в майбутньому його треба зробити кастомним
     <div className={styles.selectRanksWrapper}>
@@ -10,7 +13,9 @@ export default function SelectRanks() {
         name="selectRanks"
         className={`${styles.selectRanks} ${raleway.className}`}
       >
-        <option value="Всі ранги">Всі ранги</option>
+        <option value={`${t("achievements.selectRanks.selectOption")}`}>
+          {t("achievements.selectRanks.selectOption")}
+        </option>
       </select>
       <div className={styles.selectRanksArrow}>
         <Image 

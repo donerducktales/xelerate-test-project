@@ -9,6 +9,9 @@
       "h2": "Ви крутіші, ніж 87% спеціалістів!",
       "openedAchievementsProgress": {
         "textWrapperHeader": "Відкрито досягнень"
+      },
+      "selectRanks": {
+        "selectOption": "Всі ранги"
       }
     }
   }

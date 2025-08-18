@@ -9,6 +9,9 @@
       "h2": "You're cooler than 87% of specialists!",
       "openedAchievementsProgress": {
         "textWrapperHeader": "Opened achievements"
+      },
+      "selectRanks": {
+        "selectOption": "All ranks"
       }
     }
   }
