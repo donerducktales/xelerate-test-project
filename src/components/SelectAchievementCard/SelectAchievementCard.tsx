@@ -1,6 +1,6 @@
 "use client"
 
-import useSelectAchievementsStore from '@/lib/SelectAchievementState';
+import useSelectAchievementsStore from '@/lib/states/SelectAchievementState';
 import styles from './SelectAchievementCard.module.scss';
 
 export default function SelectAchievementCard({
