@@ -11,7 +11,12 @@
         "textWrapperHeader": "Відкрито досягнень"
       },
       "selectRanks": {
-        "selectOption": "Всі ранги"
+        "selectOption":  {
+          "all": "Всі ранги",
+          "rank1": "Ранг 1",
+          "rank2": "Ранг 2",
+          "rank3": "Ранг 3"
+        }
       }
     },
     "achievementType": {
