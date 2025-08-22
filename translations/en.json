@@ -11,7 +11,12 @@
         "textWrapperHeader": "Opened achievements"
       },
       "selectRanks": {
-        "selectOption": "All ranks"
+        "selectOption": {
+          "all": "All ranks",
+          "rank1": "Rank 1",
+          "rank2": "Rank 2",
+          "rank3": "Rank 3"
+        }
       }
     },
     "achievementType": {

@@ -4,45 +4,86 @@
   position: relative;
   max-width: 167px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .selectRanks {
-  max-width: 167px;
+  max-width: 103px;
   width: 100%;
-  height: 87px;
+  height: calc(87px - ($big + $big));
   background-color: $gray-blur;
   border-radius: $standard;
   border: 1px solid $gray-blur;
   text-transform: uppercase;
   color: $gray-lite;
   padding: $big $l;
-  appearance: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-  option {
-    background-color: $gray-blur;
-    outline: none;
-    border: none;
+  &.active {
+    border-radius: 0;
+    border-top-left-radius: $standard;
+    border-top-right-radius: $standard;
+    border-bottom: none;
+    border-top: 1px solid $gray-blur;
+    border-left: 1px solid $gray-blur;
+    border-right: 1px solid $gray-blur;
+  }
+
+  h1 { 
+    font-size: $small;
   }
 }
 
-.selectRanksArrow {
+.ranksListWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  top: 35%;
-  right: 16%;
+  background-color: rgba(31, 31, 31, 1);
+  border-bottom-right-radius: $standard;
+  border-bottom-left-radius: $standard;
+  border-bottom: 1px solid $gray-blur;
+  border-left: 1px solid $gray-blur;
+  border-right: 1px solid $gray-blur;
+  top: 88px;
+  z-index: 9;
+}
+
+.ranksListElem {
+  width: calc(100% - ($l + $l));
+  height: calc(87px - ($big + $big));
+  padding: $big $l;
+
+  p {
+    color: $gray-lite;
+    font-size: $small;
+    text-transform: uppercase;
+  }
 }
 
 @media (max-width: 768px) {
   .selectRanksWrapper {
-    max-width: none;
+    max-width: 703px;
+    width: 100%;
   }
   
   .selectRanks {
-    max-width: none;
-    width: 100%;
+    width: calc(100% - ($standard + $standard));
+    max-width: 703px;
     padding: $standard;
+  } 
+
+  .ranksListWrapper {
+    top: 71px;
   }
 
-  .selectRanksArrow {
-    right: 1.5%;
+  .ranksListElem {
+    width: calc(100% - ($standard + $standard));
+    padding: $standard;
   }
 }
