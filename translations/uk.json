@@ -21,6 +21,9 @@
       },
       "achievementTypeCardComponent": {
         "h2": "Досягнення"
+      },
+      "achievementTypeWrapper": {
+        "noAchievementsWarning": "На жаль, тут немає досягнень."
       }
     }
   }

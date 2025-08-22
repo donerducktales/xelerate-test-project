@@ -21,6 +21,9 @@
       },
       "achievementTypeCardComponent": {
         "h2": "Achievement"
+      },
+      "achievementTypeWrapper": {
+        "noAchievementsWarning": "Unfortunately, there is no achievements."
       }
     }
   }

@@ -41,6 +41,14 @@
   justify-content: center;
 }
 
+.noAchievementsWarning {
+  width: 100%;
+  color: $white;
+  font-size: $medium;
+  text-align: center;
+  margin: $xxl $standard;
+}
+
 @media (max-width: 768px) {
   .achievementTypeWrapper {
     padding: $standard;
@@ -57,6 +65,10 @@
 
     p {
       font-size: $standard;
-    }
+    } 
   }
+
+    .noAchievementsWarning {
+      font-size: $standard;
+    }
 }

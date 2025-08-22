@@ -2,6 +2,7 @@ import { AchievementsList } from "@/assets/achievementsList";
 import styles from "./AchievementTypeWrapper.module.scss";
 import AchievementTypeCard from "../AchievementTypeCard/AchievementTypeCard";
 import useSelectRanksStore from "@/lib/states/SelectRanksState";
+import { useTranslations } from "next-intl";
 
 interface AchievementTypeWrapperProps {
   achievementName: string;
@@ -15,6 +16,7 @@ const FilteredByRank = ({
   achievementCard: AchievementsList[];
 }) => {
   const { rank } = useSelectRanksStore();
+  const t = useTranslations("homePage");
   let filteredAchivementCard = achievementCard;
 
   if (rank === "rank1") {
@@ -27,21 +29,29 @@ const FilteredByRank = ({
 
   return (
     <>
-      {filteredAchivementCard.map((el) => (
-        <AchievementTypeCard
-          id={el.id}
-          key={el.id}
-          achievementName={el.achievementName}
-          achievementDescription={el.achievementDescription}
-          completed={el.completed}
-          opened={el.opened}
-          additionalInfo={el.additionalInfo}
-          achievementType={el.achievementType}
-          progress={el.progress}
-          maxProgress={el.maxProgress}
-          rank={el.rank}
-        />
-      ))}
+      {filteredAchivementCard.length === 0 ? (
+        <h1 className={styles.noAchievementsWarning}>
+          {t("achievementType.achievementTypeWrapper.noAchievementsWarning")}
+        </h1>
+      ) : (
+        <div className={styles.achievementTypeCards}>
+          {filteredAchivementCard.map((el) => (
+            <AchievementTypeCard
+              id={el.id}
+              key={el.id}
+              achievementName={el.achievementName}
+              achievementDescription={el.achievementDescription}
+              completed={el.completed}
+              opened={el.opened}
+              additionalInfo={el.additionalInfo}
+              achievementType={el.achievementType}
+              progress={el.progress}
+              maxProgress={el.maxProgress}
+              rank={el.rank}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 };
@@ -57,9 +67,7 @@ export default function AchievementTypeWrapper({
         <h1>{achievementName}</h1>
         <p>{achievementQuantity}</p>
       </div>
-      <div className={styles.achievementTypeCards}>
-        <FilteredByRank achievementCard={achievementCard} />
-      </div>
+      <FilteredByRank achievementCard={achievementCard} />
     </section>
   );
 }
